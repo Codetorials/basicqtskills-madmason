@@ -35,4 +35,5 @@ HEADERS += \
     include/Consumer.h \
     include/ConstantStringProducer.h \
     include/PrintConsumer.h \
-    include/ProducerWorker.h
+    include/ProducerWorker.h \
+    include/ConsumerWorker.h

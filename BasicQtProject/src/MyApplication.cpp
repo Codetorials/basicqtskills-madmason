@@ -26,7 +26,7 @@ MyApplication::MyApplication(int argc, char** argv):
     m_producer = new Producer(this);
     QObject::connect(this,&MyApplication::signal_producersRequired,
                      m_producer, &Producer::slot_addProducer);
-    std::cerr << "test2";
+    std::cerr << "test2" << std::endl;
     setup();
 }
 
@@ -38,8 +38,6 @@ void MyApplication::parseCommandLineArguments() {
         std::cerr << std::setw(3) << std::right << counter << " : " << argument.toStdString() << std::endl;
         counter++;
     }
-    ConstantStringProducer w;
-    w.test();
 }
 
 void MyApplication::setup(){

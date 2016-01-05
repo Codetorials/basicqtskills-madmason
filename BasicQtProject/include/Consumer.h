@@ -17,10 +17,15 @@
 #ifndef CONSUMER_H
 #define CONSUMER_H
 
+#include <random>
+
 #include <QList>
 #include <QMutex>
 #include <QObject>
+#include <QThreadPool>
 #include <QVariant>
+
+#include "ConsumerWorker.h"
 
 namespace basicQt {
 
@@ -28,8 +33,14 @@ class Consumer :
         public QObject {
     Q_OBJECT
 private:
-    QMutex * mutex;
-    QList<QVariant> * m_data;
+
+    /*
+     * Generate a random ConsumerWorker to be used to process received data.
+     */
+    ConsumerWorker createWorker();
+
+    QThreadPool* m_consumerThreads;
+    std::mt19937 mt;
 
 public:
 

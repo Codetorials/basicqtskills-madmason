@@ -13,4 +13,5 @@ INPUT(
 ./release\moc_ConstantStringProducer.o
 ./release\moc_PrintConsumer.o
 ./release\moc_ProducerWorker.o
+./release\moc_ConsumerWorker.o
 );

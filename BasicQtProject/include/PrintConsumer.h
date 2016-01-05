@@ -4,12 +4,12 @@
 #include <QObject>
 #include <QVariant>
 
-#include "Worker.h"
+#include "ConsumerWorker.h"
 
 namespace basicQt {
 
 class PrintConsumer :
-        public Worker {
+        public ConsumerWorker {
     Q_OBJECT
 
 private:

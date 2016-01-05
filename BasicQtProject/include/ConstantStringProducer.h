@@ -13,7 +13,6 @@ class ConstantStringProducer :
         public ProducerWorker {
     Q_OBJECT
 public:
-    void test();
     void run();
 
 signals:
