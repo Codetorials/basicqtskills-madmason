@@ -3,7 +3,8 @@
  * Properly subclass this into producer and consumer worker classes.
  * Each of these can have different strategies how to do stuff.
  *
- * All data passed between workers are by convention of the type QVariant.
+ * All data passed between workers are by convention of the type
+ * QVariant.
  *
  * Producer worker examples:
  * - ConstantStringProducer (just produces --- you guessed it...)
@@ -18,8 +19,8 @@
  * General consideration:
  * How to set up signals and slots?
  * How to deal with different content types of QVariant?
- * How to keep information alive over multiple runs of the same consumer?
- * (Multiple solutions are possible)
+ * How to keep information alive over multiple runs of the same
+ * consumer? (Multiple solutions are possible)
  */
 
 #ifndef WORKER_H
@@ -28,7 +29,7 @@
 #include <QObject>
 #include <QRunnable>
 
-namespace basic_qt {
+namespace basicQt {
 
 class Worker :
         public QObject,
@@ -39,9 +40,9 @@ public:
     explicit Worker();
 
     /*
-     * This method is inherited from QRunnable and will be executed in a seperate thread.
-     * Override this to achieve some actual results.
-     * Remember to use some proper locking if necessary.
+     * This method is inherited from QRunnable and will be executed
+     * in a seperate thread. Override this to achieve some actual
+     * results. Remember to use some proper locking if necessary.
      */
     virtual void run();
 };

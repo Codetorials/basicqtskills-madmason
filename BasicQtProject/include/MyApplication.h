@@ -17,8 +17,8 @@ private:
     unsigned m_minProducerCount = 2;
 
     // TODO properly instantiate these, do not forget signal-slot connections
-    Consumer m_consumer;
-    Producer m_producer;
+    Consumer *m_consumer;
+    Producer *m_producer;
 
     /**
      * @brief parseCommandLineArguments takes the command line arguments and parses them.
