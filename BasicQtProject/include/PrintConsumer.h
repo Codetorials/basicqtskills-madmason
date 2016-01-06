@@ -13,10 +13,12 @@ class PrintConsumer :
     Q_OBJECT
 
 private:
-    QVariant m_data;
+//    QVariant m_data;
 
 public:
-    PrintConsumer(QVariant data);
+    PrintConsumer(QVariant data):
+        ConsumerWorker(data){
+    }
     void run();
 };
 }

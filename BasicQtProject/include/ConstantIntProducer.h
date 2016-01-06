@@ -1,5 +1,5 @@
-#ifndef CONSTANTSTRINGPRODUCER
-#define CONSTANTSTRINGPRODUCER
+#ifndef CONSTANTINTPRODUCER
+#define CONSTANTINTPRODUCER
 
 #include <QObject>
 #include <QRunnable>
@@ -9,17 +9,17 @@
 
 namespace basicQt {
 
-class ConstantStringProducer :
+class ConstantIntProducer :
         public ProducerWorker {
     Q_OBJECT
 public:
     void run();
 
 signals:
-    void signal_stringCreated(QVariant *value);
+    void signal_intCreated(QVariant *value);
 };
 
 
 }
-#endif // CONSTANTSTRINGPRODUCER
+#endif // CONSTANTINTPRODUCER
 

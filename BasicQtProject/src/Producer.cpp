@@ -4,7 +4,7 @@
 
 #include <QObject>
 
-#include "include/ConstantStringProducer.h"
+#include "include/ConstantIntProducer.h"
 #include "include/Consumer.h"
 #include "include/MyApplication.h"
 
@@ -22,11 +22,11 @@ unsigned Producer::workerCount(){
 }
 
 void Producer::slot_addProducer(){
-    ConstantStringProducer *producer = new ConstantStringProducer();
-    QObject::connect(producer, &ConstantStringProducer::signal_stringCreated,
+    ConstantIntProducer *producer = new ConstantIntProducer();
+    QObject::connect(producer, &ConstantIntProducer::signal_intCreated,
                      m_consumer, &Consumer::slot_receiveData);
     MyApplication *app = qobject_cast <MyApplication *>(this->parent());
-    QObject::connect(producer, &ConstantStringProducer::signal_producerFinished,
+    QObject::connect(producer, &ConstantIntProducer::signal_producerFinished,
                      app, &MyApplication::slot_producerFinished);
     m_producerThreads->start(producer);
 }

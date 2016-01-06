@@ -1,4 +1,4 @@
-#include "include/ConstantStringProducer.h"
+#include "include/ConstantIntProducer.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -9,7 +9,7 @@
 using namespace basicQt;
 
 
-void ConstantStringProducer::run(){
+void ConstantIntProducer::run(){
     int x = rand();
-    emit signal_stringCreated(new QVariant(x));
+    emit signal_intCreated(new QVariant(x));
 }

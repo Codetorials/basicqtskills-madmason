@@ -7,15 +7,10 @@
 
 namespace basicQt {
 
-
-
-PrintConsumer::PrintConsumer(QVariant data){
-    m_data = data;
-}
-
 void PrintConsumer::run(){
-    std::cerr << m_data.String << std::endl;
+    ConsumerWorker::outputLock.lock();
+    std::cout << m_data.toString().toStdString() << std::endl;
+    ConsumerWorker::outputLock.unlock();
 }
-
 
 }

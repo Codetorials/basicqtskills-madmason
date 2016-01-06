@@ -4,14 +4,14 @@ INPUT(
 ./debug\Worker.o
 ./debug\Producer.o
 ./debug\Consumer.o
-./debug\ConstantStringProducer.o
 ./debug\PrintConsumer.o
+./debug\ConstantIntProducer.o
 ./debug\moc_MyApplication.o
 ./debug\moc_Worker.o
 ./debug\moc_Producer.o
 ./debug\moc_Consumer.o
-./debug\moc_ConstantStringProducer.o
 ./debug\moc_PrintConsumer.o
 ./debug\moc_ProducerWorker.o
 ./debug\moc_ConsumerWorker.o
+./debug\moc_ConstantIntProducer.o
 );

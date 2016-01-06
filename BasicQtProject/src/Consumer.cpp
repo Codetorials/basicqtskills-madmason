@@ -23,12 +23,13 @@ void Consumer::slot_receiveData(QVariant *data){
     if (x == 0) {
         std::cout << x << std::endl;
     }
+    ConsumerWorker* w = createWorker(*data);
+    m_consumerThreads->start(w);
 }
 
-ConsumerWorker Consumer::createWorker(){
-
-    std::uniform_real_distribution<double> dist(1.0,2.0);
-    std::cout << dist(mt) << std::endl;
-    return null;
+ConsumerWorker* Consumer::createWorker(QVariant data){
+//    std::uniform_real_distribution<double> dist(1.0,2.0);
+//    std::cout << dist(mt) << std::endl;
+    return new PrintConsumer(data);
 }
 

@@ -35,21 +35,23 @@ class Consumer :
 private:
 
     /*
-     * Generate a random ConsumerWorker to be used to process received data.
+     * Create a ConsumerWorker that consumes received data.
+     * Currently using the only available ConumserWorker called
+     * PrintConsumer.
      */
-    ConsumerWorker createWorker();
+    ConsumerWorker* createWorker(QVariant data);
 
     QThreadPool* m_consumerThreads;
     std::mt19937 mt;
 
 public:
 
-    explicit Consumer(QObject *parent = 0);
+    explicit Consumer(QObject* parent = 0);
 
 signals:
 
 public slots:
-    void slot_receiveData(QVariant * data);
+    void slot_receiveData(QVariant* data);
 };
 }
 #endif // CONSUMER_H
