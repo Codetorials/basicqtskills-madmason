@@ -1,9 +1,6 @@
 
 /*
  * TODO:
- * Oh, dear.
- * This has been auto-generated and looks terrible.
- * (Don't forget the implementation file, press [F4] to get there)
  *
  * 1) Properly format the code
  * 2) Add the namespace "basic_qt"
@@ -24,7 +21,6 @@
  *
  * Note:
  * A producer worker may produce multipe data items.
- * You can connect signals to other signals
  */
 
 
@@ -43,13 +39,20 @@ class Producer :
     Q_OBJECT
 public:
     explicit Producer(QObject *parent = 0);
+    ~Producer(){
+        m_producerThreads->clear();
+        m_producerThreads->waitForDone();
+        m_producerThreads->~QThreadPool();
+    }
 
-    // TODO implement this
+    /*
+     * Counts the numbers of working producers.
+     */
     unsigned workerCount();
 
 private:
-    QThreadPool *m_producerThreads;
-    Consumer *m_consumer;
+    QThreadPool* m_producerThreads;
+    Consumer* m_consumer;
 
 signals:
 

@@ -1,24 +1,4 @@
 /*
- * TODO TASK:
- * Properly subclass this into producer and consumer worker classes.
- * Each of these can have different strategies how to do stuff.
- *
- * All data passed between workers are by convention of the type
- * QVariant.
- *
- * Producer worker examples:
- * - ConstantStringProducer (just produces --- you guessed it...)
- * - CounterProducer (counts up a number and issues it as data)
- * - JsonProducer (produces a QJsonObject)
- *
- * Consumer worker examples:
- * - PrintConsumer (Just prints, what it gets)
- * - FileConsumer (Appends everything it gets to a file)
- * - SumConsumer (Filters out the numbers and sums them up)
- *
- * General consideration:
- * How to set up signals and slots?
- * How to deal with different content types of QVariant?
  * How to keep information alive over multiple runs of the same
  * consumer? (Multiple solutions are possible)
  */

@@ -6,7 +6,7 @@
 #include <QStringList>
 #include <QObject>
 
-#include "include/ConstantIntProducer.h"
+#include "include/IntProducer.h"
 #include "include/Worker.h"
 #include "include/Consumer.h"
 

@@ -1,4 +1,4 @@
-#include "include/ConstantIntProducer.h"
+#include "include/IntProducer.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -8,8 +8,7 @@
 
 using namespace basicQt;
 
-
-void ConstantIntProducer::run(){
+void IntProducer::run(){
     int x = rand();
     emit signal_intCreated(new QVariant(x));
 }

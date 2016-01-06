@@ -25,15 +25,15 @@ SOURCES += \
     src/Worker.cpp \
     src/Producer.cpp \
     src/Consumer.cpp \
-    src/PrintConsumer.cpp \
-    src/ConstantIntProducer.cpp
+    src/IntProducer.cpp \
+    src/SpecialPrintConsumer.cpp
 
 HEADERS += \
     include/MyApplication.h \
     include/Worker.h \
     include/Producer.h \
     include/Consumer.h \
-    include/PrintConsumer.h \
     include/ProducerWorker.h \
     include/ConsumerWorker.h \
-    include/ConstantIntProducer.h
+    include/IntProducer.h \
+    include/SpecialPrintConsumer.h

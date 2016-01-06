@@ -7,7 +7,7 @@
 #include <QString>
 #include <QThreadPool>
 
-#include "include/PrintConsumer.h"
+#include "include/SpecialPrintConsumer.h"
 
 using namespace basicQt;
 
@@ -30,6 +30,6 @@ void Consumer::slot_receiveData(QVariant *data){
 ConsumerWorker* Consumer::createWorker(QVariant data){
 //    std::uniform_real_distribution<double> dist(1.0,2.0);
 //    std::cout << dist(mt) << std::endl;
-    return new PrintConsumer(data);
+    return new SpecialPrintConsumer(data);
 }
 

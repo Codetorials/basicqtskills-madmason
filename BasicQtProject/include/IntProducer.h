@@ -1,5 +1,5 @@
-#ifndef CONSTANTINTPRODUCER
-#define CONSTANTINTPRODUCER
+#ifndef INTPRODUCER
+#define INTPRODUCER
 
 #include <QObject>
 #include <QRunnable>
@@ -9,7 +9,11 @@
 
 namespace basicQt {
 
-class ConstantIntProducer :
+/*
+ *
+ *
+ */
+class IntProducer :
         public ProducerWorker {
     Q_OBJECT
 public:
