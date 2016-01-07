@@ -1,6 +1,8 @@
 #ifndef PRODUCERWORKER
 #define PRODUCERWORKER
 
+#include <QMutex>
+
 #include "Worker.h"
 
 namespace basicQt {
@@ -17,7 +19,8 @@ public:
     ~ProducerWorker(){
       emit signal_producerFinished();
     }
-
+protected:
+    QMutex producerLock;
 
 signals:
     void signal_producerFinished();
